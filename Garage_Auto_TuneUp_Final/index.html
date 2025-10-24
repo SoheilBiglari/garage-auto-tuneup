@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Garage Auto TuneUp | Kraainem</title>
+<meta name="description" content="Réparation auto professionnelle & restauration vintage. EN/FR/NL. Tramlaan 7, Kraainem. +32 487 65 95 70">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.tailwindcss.com; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; frame-src https://www.google.com;">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--brand:#ff6a00;--dark:#111}
+.fade{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+.fade.show{opacity:1;transform:none}
+.hero{position:relative;background:radial-gradient(ellipse at 20% 30%, rgba(0,0,0,.28), transparent 40%),linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),url('assets/hero-1.jpg') center/cover no-repeat;min-height:68vh;animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{0%{background-size:100% auto;background-position:20% center}100%{background-size:112% auto;background-position:35% center}}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.12) 50%,transparent 100%);background-size:200% 100%;mix-blend-mode:screen;animation:sweep 7s linear infinite}
+@keyframes sweep{0%{background-position:-100% 0}100%{background-position:100% 0}}
+.service-card{transition:transform .35s ease,box-shadow .35s ease}
+.service-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.service-image{transition:transform .55s ease}
+.service-card:hover .service-image{transform:scale(1.08) rotate(-1deg)}
+#toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:9999px;display:none;align-items:center;justify-content:center;background:#fff;border:2px solid var(--brand);box-shadow:0 10px 20px rgba(0,0,0,.15)}
+#toTop.show{display:flex}#toTop img{width:28px;height:28px;transition:transform .4s ease}#toTop:hover img{transform:rotate(-25deg)}
+</style>
+</head>
+<body class="bg-white text-neutral-900 selection:bg-[var(--brand)]/20">
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-[var(--brand)] text-white grid place-items-center font-extrabold">G</div>
+      <div><div class="font-semibold text-lg">Garage Auto TuneUp</div><div id="subtitle" class="text-sm text-neutral-600"></div></div>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="#services" class="hover:text-[var(--brand)]" data-i18n="servicesTitle"></a>
+      <a href="#about" class="hover:text-[var(--brand)]" data-i18n="aboutTitle"></a>
+      <a href="#contact" class="hover:text-[var(--brand)]" data-i18n="contactTitle"></a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <select id="lang" class="border rounded px-2 py-1 text-sm bg-white/70 backdrop-blur">
+        <option value="fr">🇫🇷 FR</option><option value="en">🇬🇧 EN</option><option value="nl">🇳🇱 NL</option>
+      </select>
+      <a href="tel:+32487659570" class="hidden sm:inline-block px-3 py-1.5 rounded-lg border border-[var(--brand)] text-[var(--brand)] font-semibold">+32 487 65 95 70</a>
+    </div>
+  </div>
+</header>
+
+<section class="relative hero fade">
+  <div class="relative max-w-7xl mx-auto px-4 py-20 text-white">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-3 drop-shadow">Garage Auto TuneUp</h1>
+    <p id="heroSub" class="text-lg md:text-xl opacity-90 max-w-2xl drop-shadow"></p>
+    <div class="mt-6 flex gap-3">
+      <a href="#contact" class="bg-[var(--brand)] hover:opacity-90 px-5 py-3 rounded-lg font-semibold" data-i18n="bookNow"></a>
+      <a href="#services" class="border border-white/80 px-5 py-3 rounded-lg font-semibold" data-i18n="servicesTitle"></a>
+    </div>
+    <div class="mt-4 text-sm text-white/90 space-y-1">
+      <div><span data-i18n="phoneLabel"></span>: <a class="underline" href="tel:+32487659570">+32 487 65 95 70</a></div>
+      <div>Email: <a class="underline" href="mailto:tuneup58@outlook.com">tuneup58@outlook.com</a></div>
+      <div><span data-i18n="btwLabel"></span>: —</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="max-w-7xl mx-auto px-4 py-16 fade">
+  <h2 class="text-2xl font-bold mb-8" data-i18n="servicesTitle"></h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <article class="service-card p-0 rounded-xl border overflow-hidden"><div class="h-40 bg-neutral-900 grid place-items-center overflow-hidden"><img class="service-image w-24 h-24" src="assets/diagnostics.svg" alt=""></div><div class="p-6"><h3 class="font-semibold mb-2" data-i18n="s1"></h3><p class="text-sm text-neutral-600" data-i18n="s1d"></p></div></article>
+    <article class="service-card p-0 rounded-xl border overflow-hidden"><div class="h-40 bg-neutral-900 grid place-items-center overflow-hidden"><img class="service-image w-24 h-24" src="assets/oil.svg" alt=""></div><div class="p-6"><h3 class="font-semibold mb-2" data-i18n="s2"></h3><p class="text-sm text-neutral-600" data-i18n="s2d"></p></div></article>
+    <article class="service-card p-0 rounded-xl border overflow-hidden"><div class="h-40 bg-neutral-900 grid place-items-center overflow-hidden"><img class="service-image w-24 h-24" src="assets/filters.svg" alt=""></div><div class="p-6"><h3 class="font-semibold mb-2" data-i18n="s3"></h3><p class="text-sm text-neutral-600" data-i18n="s3d"></p></div></article>
+    <article class="service-card p-0 rounded-xl border overflow-hidden"><div class="h-40 bg-neutral-900 grid place-items-center overflow-hidden"><img class="service-image w-24 h-24" src="assets/clutch.svg" alt=""></div><div class="p-6"><h3 class="font-semibold mb-2" data-i18n="s4"></h3><p class="text-sm text-neutral-600" data-i18n="s4d"></p></div></article>
+    <article class="service-card p-0 rounded-xl border overflow-hidden"><div class="h-40 bg-neutral-900 grid place-items-center overflow-hidden"><img class="service-image w-24 h-24" src="assets/timing.svg" alt=""></div><div class="p-6"><h3 class="font-semibold mb-2" data-i18n="s5"></h3><p class="text-sm text-neutral-600" data-i18n="s5d"></p></div></article>
+    <article class="service-card p-0 rounded-xl border overflow-hidden"><div class="h-40 bg-neutral-900 grid place-items-center overflow-hidden"><img class="service-image w-24 h-24" src="assets/tires.svg" alt=""></div><div class="p-6"><h3 class="font-semibold mb-2" data-i18n="s6"></h3><p class="text-sm text-neutral-600" data-i18n="s6d"></p></div></article>
+  </div>
+</section>
+
+<section id="about" class="bg-neutral-50 border-y fade"><div class="max-w-7xl mx-auto px-4 py-14"><h2 class="text-2xl font-bold mb-4" data-i18n="aboutTitle"></h2><p class="text-neutral-700 max-w-3xl" id="aboutText"></p></div></section>
+
+<section id="contact" class="max-w-7xl mx-auto px-4 py-16 fade">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-2xl font-bold mb-4" data-i18n="contactTitle"></h2>
+      <p class="mb-2" id="address"></p>
+      <p class="mb-2"><span data-i18n="phoneLabel"></span>: <a class="underline" href="tel:+32487659570">+32 487 65 95 70</a></p>
+      <p class="mb-2">Email: <a class="underline" href="mailto:tuneup58@outlook.com">tuneup58@outlook.com</a></p>
+      <p class="mb-4"><span data-i18n="btwLabel"></span>: <strong>—</strong></p>
+      <div class="mb-6"><h3 class="font-semibold mb-2" data-i18n="hoursTitle"></h3><ul id="hoursList" class="text-sm text-neutral-700 space-y-1"></ul></div>
+      <form id="contactForm" class="space-y-3 max-w-md">
+        <input class="w-full border rounded p-3" name="name" placeholder="Name / Nom / Naam" required>
+        <input class="w-full border rounded p-3" type="email" name="email" placeholder="Email" required>
+        <input class="w-full border rounded p-3" name="subject" placeholder="Subject / Sujet / Onderwerp">
+        <textarea class="w-full border rounded p-3" rows="4" name="message" placeholder="Message" required></textarea>
+        <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
+        <div class="flex flex-wrap gap-3 items-center"><button type="submit" class="bg-[var(--brand)] text-white px-4 py-2 rounded font-semibold" data-i18n="sendBtn"></button><span id="formStatus" class="text-sm"></span></div>
+      </form>
+    </div>
+    <div><h3 class="font-semibold mb-3">Map</h3><div class="w-full h-80 rounded overflow-hidden border"><iframe title="Garage Auto TuneUp map" src="https://www.google.com/maps?q=Tramlaan+7,+1950+Kraainem&output=embed" class="w-full h-full" loading="lazy"></iframe></div></div>
+  </div>
+</section>
+
+<footer class="bg-orange-500/10 border-t"><div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-3"><div><div class="font-semibold">Garage Auto TuneUp</div><div class="text-sm" id="addressFooter"></div></div><div class="text-sm">© <span id="year"></span> Garage Auto TuneUp — All rights reserved.</div></div></footer>
+
+<button id="toTop" aria-label="Back to top"><img src="assets/wrench.svg" alt="Back to top"></button>
+
+<script>
+const T={en:{subtitle:"Professional car repairs & vintage restoration",servicesTitle:"Our Services",contactTitle:"Contact & Location",phoneLabel:"Phone",btwLabel:"VAT (BTW) Number",hoursTitle:"Opening Hours",bookNow:"Book an Appointment",aboutTitle:"About Us",aboutText:"Garage Auto TuneUp is your local expert for modern maintenance and meticulous vintage American car restoration.",addressLine:"Tramlaan 7, 1950 Kraainem, Belgium",s1:"Electronic diagnostics",s1d:"Modern OBD-II scanning & fault tracing.",s2:"Engine oil change",s2d:"High‑quality oils & filters, fast service.",s3:"Replacement of all filters",s3d:"Air, oil, cabin & fuel filters.",s4:"Clutch & flywheel service",s4d:"Smooth engagement, OEM or performance parts.",s5:"Timing chain replacement",s5d:"Precise timing & long‑lasting reliability.",s6:"Tires & brakes",s6d:"Mounting, balancing & brake service.",sendBtn:"Send"},
+fr:{subtitle:"Réparation automobile professionnelle & restauration vintage",servicesTitle:"Nos Services",contactTitle:"Contact & Localisation",phoneLabel:"Téléphone",btwLabel:"Numéro TVA (BTW)",hoursTitle:"Horaires",bookNow:"Prendre Rendez-vous",aboutTitle:"À propos",aboutText:"Garage Auto TuneUp est votre expert local pour l’entretien moderne et la restauration soignée de voitures américaines vintage.",addressLine:"Tramlaan 7, 1950 Kraainem, Belgique",s1:"Diagnostic électronique",s1d:"Lecture OBD-II & recherche de pannes.",s2:"Vidange d’huile",s2d:"Huiles et filtres de qualité, service rapide.",s3:"Remplacement de tous les filtres",s3d:"Air, huile, habitacle & carburant.",s4:"Disque et embrayage",s4d:"Engagement fluide, pièces d’origine.",s5:"Remplacement de la chaîne de distribution",s5d:"Calage précis & fiabilité durable.",s6:"Pneus & freins",s6d:"Montage, équilibrage & freins.",sendBtn:"Envoyer"},
+nl:{subtitle:"Professionele autoreparaties & vintage restauratie",servicesTitle:"Onze Diensten",contactTitle:"Contact & Locatie",phoneLabel:"Telefoon",btwLabel:"BTW-nummer",hoursTitle:"Openingsuren",bookNow:"Afspraak Maken",aboutTitle:"Over Ons",aboutText:"Uw specialist voor modern onderhoud en restauratie van Amerikaanse klassiekers.",addressLine:"Tramlaan 7, 1950 Kraainem, België",s1:"Elektronische diagnose",s1d:"Moderne OBD-II scan & foutopsporing.",s2:"Olie verversen",s2d:"Kwaliteitsolie & filters, snelle service.",s3:"Vervanging van alle filters",s3d:"Lucht-, olie-, cabine- & brandstoffilter.",s4:"Koppeling & vliegwiel",s4d:"Soepel schakelen, OEM of performance.",s5:"Vervanging distributieketting",s5d:"Nauwkeurige timing & duurzaamheid.",s6:"Banden & remmen",s6d:"Monteren, balanceren & remservice.",sendBtn:"Verzenden"}};
+
+const els={subtitle:document.getElementById("subtitle"),heroSub:document.getElementById("heroSub"),servicesTitle:document.querySelectorAll("[data-i18n='servicesTitle']"),contactTitle:document.querySelector("[data-i18n='contactTitle']"),aboutTitle:document.querySelector("[data-i18n='aboutTitle']"),aboutText:document.getElementById("aboutText"),address:document.getElementById("address"),addressFooter:document.getElementById("addressFooter"),phoneLabels:document.querySelectorAll("[data-i18n='phoneLabel']"),btwLabels:document.querySelectorAll("[data-i18n='btwLabel']"),bookNow:document.querySelector("[data-i18n='bookNow']"),hoursTitle:document.querySelector("[data-i18n='hoursTitle']"),hoursList:document.getElementById("hoursList"),year:document.getElementById("year"),lang:document.getElementById("lang"),sendBtn:document.querySelector("[data-i18n='sendBtn']")};
+
+const hours={en:[["Monday–Friday","09:00 – 18:00"],["Saturday","09:00 – 13:00"],["Sunday","Closed"]],fr:[["Lundi–Vendredi","09:00 – 18:00"],["Samedi","09:00 – 13:00"],["Dimanche","Fermé"]],nl:[["Maandag–Vrijdag","09:00 – 18:00"],["Zaterdag","09:00 – 13:00"],["Zondag","Gesloten"]]};
+
+function render(lang){const t=T[lang];els.subtitle.textContent=t.subtitle;els.heroSub.textContent=t.subtitle;els.servicesTitle.forEach(n=>n.textContent=t.servicesTitle);els.contactTitle.textContent=t.contactTitle;els.aboutTitle.textContent=t.aboutTitle;els.aboutText.textContent=t.aboutText;els.address.textContent=t.addressLine;els.addressFooter.textContent=t.addressLine;els.phoneLabels.forEach(n=>n.textContent=t.phoneLabel);els.btwLabels.forEach(n=>n.textContent=t.btwLabel);els.bookNow.textContent=t.bookNow;els.hoursTitle.textContent=t.hoursTitle;els.sendBtn.textContent=t.sendBtn;document.querySelector("[data-i18n='s1']").textContent=t.s1;document.querySelector("[data-i18n='s1d']").textContent=t.s1d;document.querySelector("[data-i18n='s2']").textContent=t.s2;document.querySelector("[data-i18n='s2d']").textContent=t.s2d;document.querySelector("[data-i18n='s3']").textContent=t.s3;document.querySelector("[data-i18n='s3d']").textContent=t.s3d;document.querySelector("[data-i18n='s4']").textContent=t.s4;document.querySelector("[data-i18n='s4d']").textContent=t.s4d;document.querySelector("[data-i18n='s5']").textContent=t.s5;document.querySelector("[data-i18n='s5d']").textContent=t.s5d;document.querySelector("[data-i18n='s6']").textContent=t.s6;document.querySelector("[data-i18n='s6d']").textContent=t.s6d;els.hoursList.innerHTML='';hours[lang].forEach(([d,h])=>{const li=document.createElement('li');li.className='flex justify-between max-w-xs';li.innerHTML=`<span>${d}</span><span>${h}</span>`;els.hoursList.appendChild(li)});document.documentElement.lang=lang}
+
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.15});document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+
+const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>{window.scrollY>400?toTop.classList.add('show'):toTop.classList.remove('show')});toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+const FORM_ENDPOINT="DEMO";
+const form=document.getElementById('contactForm');const status=document.getElementById('formStatus');form.addEventListener('submit',async e=>{e.preventDefault();status.textContent='';const data=new FormData(form);if(FORM_ENDPOINT==='DEMO'){status.textContent='✔️ Message envoyé (démo).';form.reset();return;}try{const res=await fetch(FORM_ENDPOINT,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(res.ok){status.textContent='✔️ Merci ! Votre message a été envoyé.';form.reset();}else{status.textContent='⚠️ Erreur lors de l’envoi. Réessayez.';}}catch(err){status.textContent='⚠️ Problème de réseau. Réessayez.';}});
+
+els.year.textContent=new Date().getFullYear();els.lang.addEventListener('change',e=>{render(e.target.value)});render('fr');
+</script>
+</body></html>
